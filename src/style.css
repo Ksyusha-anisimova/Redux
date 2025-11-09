@@ -3,7 +3,7 @@
     padding: 0;
 }
 
-.main-block, .class-count{
+.main, .counter{
     box-sizing: border-box;
     display: flex;
     font-size: 22px;
@@ -16,21 +16,18 @@
     width: 80%;
     height: 10rem;
     border: 1px solid rgba(46, 122, 139, 0.5);
-    /*margin-bottom: 30px;*/
     box-shadow: 5px 5px 9px rgba(35, 86, 97, 0.39);
 }
-.theme-btn{
+.main__themeBtn{
     font-size: 16px;
-    /*border-radius: 50px;*/
-    /*padding: 10px;*/
     border: 1px solid #2e7a8b;
     background-color: rgba(46, 122, 139, 0.5);
 }
-.theme-btn:hover{
+.main__themeBtn:hover{
     border: 1px solid #225a67;
     background-color: rgba(34, 90, 103, 0.61);
 }
-button{
+.button{
     color: white;
     padding: 5px;
     border: 1px solid gray;
@@ -39,4 +36,13 @@ button{
 .dark{
     background-color: #2b2a2a;
     color: white;
+}
+.button--add{
+    background-color: rgba(0,0,255,0.71);
+}
+.button--sub {
+    background: rgba(255,0,0,0.68);
+}
+.button--async {
+    background: rgba(0,128,0,0.64);
 }

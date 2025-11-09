@@ -10,26 +10,31 @@
 <body>
 
 <section>
-    <div class="main-block">
-        <span>Redax</span>
+    <div class="main">
+        <span class="main__title">Redax</span>
         <div>
-            <button class="theme-btn" id="theme">
+            <button class="button main__themeBtn" id="theme">
                 Change theme
             </button>
         </div>
 
     </div>
 
-    <div class="class-count">
+    <div class="counter">
 
-        <h5>counter: <span id="counter"></span></h5>
+        <h5 class="counter__title">
+            counter:
+            <span class="counter__value" id="counter">
+
+            </span>
+        </h5>
 
 
-        <div class="button">
+        <div class="counter__controls">
 
-            <button style="background: rgba(0,0,255,0.71);" id="add">INCREMENT</button>
-            <button style="background: rgba(255,0,0,0.68);" id="sub">DECREMENT</button>
-            <button style="background: rgba(0,128,0,0.64);" id="async">ASYNC</button>
+            <button class="button button--add" id="add">INCREMENT</button>
+            <button class="button button--sub" id="sub">DECREMENT</button>
+            <button class="button button--async" id="async">ASYNC</button>
 
         </div>
 
