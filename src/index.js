@@ -1,7 +1,7 @@
 import './style.css';
 import {createStore, applyMiddleware} from "redux";
 import {rootReducer} from "./redux/rootReducer";
-import {decrement, increment, asyncIncrement} from "./redux/actions";
+import {decrement, increment, asyncIncrement, changeTheme} from "./redux/actions";
 import {thunk} from 'redux-thunk';
 import {logger} from 'redux-logger';
 
@@ -30,14 +30,19 @@ asyncBtn.addEventListener('click',()=>{
 });
 
 themeBtn.addEventListener('click',()=>{
+    const newTheme = document.body.classList.contains('light')
+        ? 'dark'
+        : 'light';
+    store.dispatch(changeTheme(newTheme));
     // document.body.classList.toggle('dark');
 })
 
-store.subscribe(()=>{
-    const state = store.getState();
-
-    counter.textContent = state.counter;
-});
-
 store.dispatch({type: 'INIT_APPLICATION'});
 
+
+store.subscribe(()=>{
+    const state = store.getState();
+    counter.textContent = state.counter;
+
+    document.body.className = state.theme.value;
+});
