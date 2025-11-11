@@ -1,0 +1,22 @@
+# Node
+node_modules/
+dist/
+.cache/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Env
+.env
+.env.*
+
+# OS / Finder
+.DS_Store
+
+# IDE
+.idea/
+.vscode/
+
+# Misc
+stats.json
